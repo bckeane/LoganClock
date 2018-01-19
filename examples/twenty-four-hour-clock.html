@@ -1,0 +1,54 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="../compiled/flipclock.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script src="../compiled/flipclock.js"></script>
+	<style>
+		.content {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+
+		body, html {
+		    height: 100%;
+		    margin: 0;
+		}
+
+		.bg {
+		    /* The image used */
+		    background-image: url("../cool.jpg");
+
+		    /* Full height */
+		    height: 100%;
+
+		    /* Center and scale the image nicely */
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="bg"></div>
+	<div class="content" id="clock"></div>
+
+	<script type="text/javascript">
+		var clock;
+
+		$(document).ready(function() {
+			clock = $('#clock').FlipClock({
+				clockFace: 'TwentyFourHourClock'
+			});
+		});
+	</script>
+
+</body>
+
+</html>
